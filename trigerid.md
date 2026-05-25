@@ -42,6 +42,6 @@ VALUES ('Viljandi', 'Viljandimaa', 50000);
 
 SELECT * FROM linnad;
 SELECT * FROM logi;
-
+```
 <img width="626" height="400" alt="{E38AEE1C-73CF-4AAE-A28D-C373E291A343}" src="https://github.com/user-attachments/assets/a33cc0cb-49fd-4231-bb95-d6b6d6ec361a" />
 
