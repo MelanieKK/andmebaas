@@ -128,3 +128,4 @@ SELECT * FROM linnad;
 SELECT * FROM logi;
 ``` SQL
 <img width="643" height="430" alt="{E3C525F4-150E-4BC3-8A24-62451ED5B4B4}" src="https://github.com/user-attachments/assets/534b4544-22ff-4b19-94e9-598a9500ccf5" />
+
