@@ -220,6 +220,7 @@ AS
 BEGIN
     PRINT 'Restorani andmeid uuendati!'
 END;
+
 ```
 <img width="570" height="443" alt="{C3CAF7D5-9974-409D-806D-8CE2BC6ED422}" src="https://github.com/user-attachments/assets/d6e95207-bc78-4f27-8a23-5d4f4b6d35a6" />
 
