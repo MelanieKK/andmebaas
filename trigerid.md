@@ -62,7 +62,6 @@ FROM deleted;
 ```
 <img width="685" height="500" alt="{B5118D7D-F991-4FA8-BDF4-B91E6B3EFDF2}" src="https://github.com/user-attachments/assets/a1a2cf78-5f16-4266-9f9b-f0e6630d9bcb" />
 
-```SQL
 --3.UPDATE TRIGGER -jälgib uuendused/muutused tabelis linnad
 --ja teeb vastava kirje tabelise logi
 
