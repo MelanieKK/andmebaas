@@ -178,5 +178,6 @@ SELECT * FROM Restoranid
 SELECT *
 FROM Restoranid
 WHERE restoran_name LIKE 'T%';
-```SQL
+``` SQL
 <img width="608" height="481" alt="{7AD78813-C3B2-4E63-98D6-310661198D72}" src="https://github.com/user-attachments/assets/4d1433f3-e19c-4422-bfba-557c7cb810c2" />
+
