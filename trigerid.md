@@ -257,6 +257,7 @@ VALUES (7, 'Test Restoran', '5557777', 'test@resto.ee', 2022);
 UPDATE Restoranid
 SET restoran_name = 'Uus Nimi'
 WHERE restoran_id = 1;
+
 ```
 <img width="545" height="325" alt="{72F27EB6-816B-4109-BCF8-A348662E0072}" src="https://github.com/user-attachments/assets/aa860f5a-27ea-428a-a750-36fa6f603d5d" />
 
