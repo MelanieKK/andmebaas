@@ -179,5 +179,7 @@ SELECT *
 FROM Restoranid
 WHERE restoran_name LIKE 'T%';
 ``` SQL
-<img width="608" height="481" alt="{7AD78813-C3B2-4E63-98D6-310661198D72}" src="https://github.com/user-attachments/assets/4d1433f3-e19c-4422-bfba-557c7cb810c2" />
+<img width="615" height="553" alt="{7436E210-0E65-4FEA-A8F1-7B6401B64C22}" src="https://github.com/user-attachments/assets/2850c103-d827-4199-8fc4-9865c0f3028d" />
 
+<img width="602" height="252" alt="{42444274-DE89-4029-B4D0-B556443D76E6}" src="https://github.com/user-attachments/assets/4000bd91-5582-4f39-89fa-8d42953127e9" />
+<img width="605" height="334" alt="{5ADE0EF2-1DB8-44F4-9BFF-BF6E1BBB848B}" src="https://github.com/user-attachments/assets/1af004d7-08a1-489a-8f98-f7a09f76a96e" />
