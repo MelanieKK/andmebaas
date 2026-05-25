@@ -129,3 +129,54 @@ SELECT * FROM logi;
 ``` SQL
 <img width="643" height="430" alt="{E3C525F4-150E-4BC3-8A24-62451ED5B4B4}" src="https://github.com/user-attachments/assets/534b4544-22ff-4b19-94e9-598a9500ccf5" />
 
+-- ANDMED TABELISSE
+INSERT INTO Restoranid VALUES
+(1, 'Tulbi Restoran', '5551111', 'tulbi@resto.ee', 2012),
+(2, 'Mere Maitsed', '5552222', 'mere@resto.ee', 2018),
+(3, 'Taevas Grill', '5553333', 'taevas@resto.ee', 2010),
+(4, 'PastaMaja', '5554444', 'pasta@resto.ee', 2020),
+(5, 'Tammekas Cafe', '5555555', 'tammekas@resto.ee', 2014);
+
+-- PROTSEDUUR 1
+
+CREATE PROCEDURE lisa_restoran
+    @p_id INT,
+    @p_nimi VARCHAR(100),
+    @p_phone VARCHAR(20),
+    @p_email VARCHAR(100),
+    @p_aasta INT
+AS
+BEGIN
+    INSERT INTO Restoranid
+    VALUES (@p_id, @p_nimi, @p_phone, @p_email, @p_aasta)
+END;
+EXEC lisa_restoran
+    6,
+    'Tartu Söögimaja',
+    '5556666',
+    'tartu@resto.ee',
+    2016;
+
+-- PROTSEDUUR 2
+
+CREATE PROCEDURE uuenda_restoran
+    @p_id INT,
+    @uus_nimi VARCHAR(100)
+AS
+BEGIN
+    UPDATE Restoranid
+    SET restoran_name = @uus_nimi
+    WHERE restoran_id = @p_id
+END;
+EXEC uuenda_restoran
+    2,
+    'Mere Restoran';
+SELECT * FROM Restoranid
+
+-- 1. T tähega algavad restoranid
+
+SELECT *
+FROM Restoranid
+WHERE restoran_name LIKE 'T%';
+``` sql
+<img width="608" height="481" alt="{7AD78813-C3B2-4E63-98D6-310661198D72}" src="https://github.com/user-attachments/assets/4d1433f3-e19c-4422-bfba-557c7cb810c2" />
