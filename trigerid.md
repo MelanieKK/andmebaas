@@ -87,5 +87,44 @@ WHERE linnId=1;
 
 SELECT * FROM linnad;
 SELECT * FROM logi;
-```
-<img width="619" height="423" alt="{304226CD-6787-41EE-BA6C-235A08554D67}" src="https://github.com/user-attachments/assets/63b1baf2-af2f-49b7-8fdb-a2faf3963971" />
+
+--trigeri sisse/välja lülitamine 
+DISABLE TRIGGER linnaLisamine ON linnad;
+DISABLE TRIGGER linnaKustutamine ON linnad;
+ENABLE TRIGGER linnaUuendamine ON linnad;
+
+--Ühine triger, mis jälgib kas lisamine või kustutamine tabelisse linnad
+CREATE TRIGGER linnaLisamineKustutamine
+ON linnad -- tabel, mida triger jälgib
+FOR INSERT, DELETE
+AS
+BEGIN
+SET NOCOUNT ON;
+	INSERT INTO logi(kasutaja, aeg, andmed)
+	SELECT 
+	SYSTEM_USER, --siselogitud user
+	GETDATE(), 
+	CONCAT('lisatud:' ,inserted.linnanimi, ', ',
+	inserted.maakond,' ,',inserted.rahvaarv)
+	FROM inserted
+
+	UNION ALL
+
+	SELECT 
+	SYSTEM_USER, --siselogitud user
+	GETDATE(), 
+	CONCAT('kustutatud:' ,deleted.linnanimi, ', ',
+	deleted.maakond,' ,',deleted.rahvaarv)
+	FROM deleted;
+END;
+
+--kontroll 
+DELETE FROM linnad WHERE linnId=3;
+
+INSERT INTO linnad(linnanimi, maakond, rahvaarv)
+VALUES ('Viljandi', 'Viljandimaa', 50000);
+
+SELECT * FROM linnad;
+SELECT * FROM logi;
+``` SQL
+<img width="643" height="430" alt="{E3C525F4-150E-4BC3-8A24-62451ED5B4B4}" src="https://github.com/user-attachments/assets/534b4544-22ff-4b19-94e9-598a9500ccf5" />
