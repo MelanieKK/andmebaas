@@ -61,3 +61,31 @@ deleted.maakond,' ,',deleted.rahvaarv)
 FROM deleted;
 ```
 <img width="685" height="500" alt="{B5118D7D-F991-4FA8-BDF4-B91E6B3EFDF2}" src="https://github.com/user-attachments/assets/a1a2cf78-5f16-4266-9f9b-f0e6630d9bcb" />
+
+```SQL
+--3.UPDATE TRIGGER -jälgib uuendused/muutused tabelis linnad
+--ja teeb vastava kirje tabelise logi
+
+CREATE TRIGGER linnaUuendamine
+ON linnad -- tabel, mida triger jälgib
+FOR UPDATE
+AS
+INSERT INTO logi(kasutaja, aeg, andmed)
+SELECT 
+SYSTEM_USER, --siselogitud user
+GETDATE(), 
+CONCAT('vana andmed :' ,
+deleted.linnanimi, ', ', deleted.maakond,' ,',deleted.rahvaarv,
+' ||| uued andmed: ',
+inserted.linnanimi, ', ', inserted.maakond,' ,',inserted.rahvaarv)
+FROM deleted INNER JOIN inserted
+ON deleted.linnId=inserted.linnId;
+
+--kontroll
+UPDATE linnad SET linnanimi='Tallinn22', rahvaarv=700000
+WHERE linnId=1;
+
+SELECT * FROM linnad;
+SELECT * FROM logi;
+```
+<img width="619" height="423" alt="{304226CD-6787-41EE-BA6C-235A08554D67}" src="https://github.com/user-attachments/assets/63b1baf2-af2f-49b7-8fdb-a2faf3963971" />
