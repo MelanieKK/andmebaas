@@ -45,3 +45,19 @@ SELECT * FROM logi;
 ```
 <img width="626" height="400" alt="{E38AEE1C-73CF-4AAE-A28D-C373E291A343}" src="https://github.com/user-attachments/assets/a33cc0cb-49fd-4231-bb95-d6b6d6ec361a" />
 
+```SQL
+--2. DELETE triger - jälgib kust kasutamine tabelis linnad ja teeb vastava kirje logi tabelisse
+--ja teeb vastava kirje logi tabelisse
+CREATE TRIGGER linnaKustutamine
+ON linnad -- tabel, mida triger jälgib
+FOR DELETE
+AS
+INSERT INTO logi(kasutaja, aeg, andmed)
+SELECT 
+SYSTEM_USER, --siselogitud user
+GETDATE(), 
+CONCAT('kustutatud:' ,deleted.linnanimi, ', ',
+deleted.maakond,' ,',deleted.rahvaarv)
+FROM deleted;
+```
+<img width="685" height="500" alt="{B5118D7D-F991-4FA8-BDF4-B91E6B3EFDF2}" src="https://github.com/user-attachments/assets/a1a2cf78-5f16-4266-9f9b-f0e6630d9bcb" />
