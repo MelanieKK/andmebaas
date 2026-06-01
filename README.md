@@ -1,7 +1,7 @@
 # Andmebaasid Melanie Koroljova portfoolio Logitpe24
 Andmebaasidega seotud sql kood ja konspektid
 
-[Select laused](select.md) | [Protseduurid](Protseduur.md) | [vaade](vaade.md) | [Kasutaja](kasutaja.md) | [Triggerid](trigerid.md) | [keys](keys.md)
+[Select laused](select.md) | [Protseduurid](Protseduur.md) | [vaade](vaade.md) | [Kasutaja](kasutaja.md) | [Triggerid](trigerid.md) | [keys](keys.md) | [küsimused](kysimused.md)
 
 - SQL - structured Query Language - struktureeritud päringukeel
 - DDl - Data Definition Language -andmebaasi struktuuri loomiseks - CREATE, ALTER
