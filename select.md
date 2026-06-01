@@ -2,7 +2,7 @@
 
 [Select laused](select.md) [Kasutaja loomine SQL serveris](kasutajad.md) [Küsimused](kysimused.md) [Triggerid](trigerid.md)
 
-<img width="1047" height="716" alt="{75F9AB5C-55EF-4A45-AABA-B47687D25CD8}" src="https://github.com/user-attachments/assets/1db10992-3adc-4526-8ebc-89f62a292f28" />
+<img width="1025" height="666" alt="{31090670-5AAA-48A5-B776-7D3EBD4723B1}" src="https://github.com/user-attachments/assets/6ec98934-18af-458f-8ed7-34ef88306194" />
 
 
 ```sql
