@@ -2,7 +2,8 @@
 
 [Select laused](select.md) [Kasutaja loomine SQL serveris](kasutajad.md) [Küsimused](kysimused.md) [Triggerid](trigerid.md)
 
-<img width="1025" height="666" alt="{31090670-5AAA-48A5-B776-7D3EBD4723B1}" src="https://github.com/user-attachments/assets/6ec98934-18af-458f-8ed7-34ef88306194" />
+<img width="888" height="639" alt="{CB975C68-CE54-45F7-A371-858E206C853C}" src="https://github.com/user-attachments/assets/c3a3dd76-6234-4a93-afe2-120766adb8fb" />
+
 
 
 ```sql
@@ -89,7 +90,8 @@ order by hind DESC;
 
 ```
 
-<img width="715" height="430" alt="{9C938AB8-A063-447B-AAB3-7002554824AE}" src="https://github.com/user-attachments/assets/ab34cacc-9760-4173-9e96-86453127f412" />
+<img width="610" height="403" alt="{5D094C90-0CE1-4DD1-AD45-72CCB9A706B4}" src="https://github.com/user-attachments/assets/1bc046bc-fdd1-44f4-aeb8-540f81643b2f" />
+
 
 ```sql
 
@@ -99,7 +101,8 @@ where mark like 'C%'
 
 ```
 
-<img width="406" height="292" alt="{B7BDCF54-86F2-44D2-96B0-61429C014D37}" src="https://github.com/user-attachments/assets/98dc21d3-2f90-425d-b9dc-10e621c5ce55" />
+<img width="234" height="241" alt="{0A647BC5-EB5B-47C8-BBBD-C95A2ADB0358}" src="https://github.com/user-attachments/assets/b3751dc9-2716-4c6c-9ee0-5aa74817129e" />
+
 
 ```sql
 
