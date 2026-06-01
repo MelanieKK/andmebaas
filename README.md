@@ -1,4 +1,4 @@
-# Andmebaasid õpilase portfoolio Logitpe24
+# Andmebaasid Melanie Koroljova portfoolio Logitpe24
 Andmebaasidega seotud sql kood ja konspektid
 
 [Select laused](select.md) [Kasutaja loomine XAMPP-is](kasutajad.md) [Kasutaja loomine SQL serveris](kasutajad.md) [Triggerid](trigerid.md)
