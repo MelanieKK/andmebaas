@@ -291,3 +291,24 @@ CREATE TABLE Õpilased (
 INSERT INTO Õpilased VALUES (1, '50501010001', 'mari@kool.ee', 'Mari', 'Mägi');
 ```
 ---
+
+Allikad: 
+
+1. **Microsoft Learn** – *Primary and Foreign Key Constraints (SQL Server)*
+https://learn.microsoft.com/en-us/sql/relational-databases/tables/primary-and-foreign-key-constraints?view=sql-server-ver17
+2. **Microsoft Learn** – *Create Unique Constraints (SQL Server)*
+   https://learn.microsoft.com/en-us/sql/relational-databases/tables/create-unique-constraints?view=sql-server-ver17
+3. **W3Schools** – *SQL PRIMARY KEY Constraint*
+   https://www.w3schools.com/sql/sql_primarykey.asp
+4. **W3Schools** – *SQL FOREIGN KEY Constraint*
+   https://www.w3schools.com/sql/sql_foreignkey.asp
+5. **GeeksForGeeks** – *Composite Key in SQL*
+   https://www.geeksforgeeks.org/sql/composite-key-in-sql/
+6. **database.guide** – *How to Create a Composite Primary Key in SQL Server*
+   https://database.guide/how-to-create-a-composite-primary-key-in-sql-server-t-sql-example/
+7. **GeeksForGeeks** – *Keys in Relational Model*
+   https://www.geeksforgeeks.org/dbms/types-of-keys-in-relational-model-candidate-super-primary-alternate-and-foreign/
+8. **GeeksForGeeks** – *Candidate Key in DBMS*
+   https://www.geeksforgeeks.org/dbms/candidate-key-in-dbms/
+9. **GeeksForGeeks** – *SQL Alternate Key*
+   https://www.geeksforgeeks.org/sql/sql-alternate-key/
