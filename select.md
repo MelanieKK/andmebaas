@@ -2,7 +2,8 @@
 
 [Select laused](select.md) [Kasutaja loomine SQL serveris](kasutajad.md) [Küsimused](kysimused.md) [Triggerid](trigerid.md)
 
-<img width="1441" height="860" alt="{84FC6E06-97C1-47A9-BC2A-DFD7E4ABF854}" src="https://github.com/user-attachments/assets/7214cd53-df8c-4264-88b4-ed61f45c4944" />
+<img width="1047" height="716" alt="{75F9AB5C-55EF-4A45-AABA-B47687D25CD8}" src="https://github.com/user-attachments/assets/1db10992-3adc-4526-8ebc-89f62a292f28" />
+
 
 ```sql
 create database selectMelanie
