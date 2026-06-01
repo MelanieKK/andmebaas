@@ -1,3 +1,5 @@
+## Küsimused
+
 [Select laused](select.md) | [Protseduurid](Protseduur.md) | [vaade](vaade.md) | [Kasutaja](kasutaja.md) | [Triggerid](trigerid.md) | [keys](keys.md) | [küsimused](kysimused.md)
 
 <img width="942" height="304" alt="{7C6F76FE-FAD5-43F6-874E-ED1CDA9ACBD5}" src="https://github.com/user-attachments/assets/e54da848-3c49-4217-be1a-f66c17226ece" />
