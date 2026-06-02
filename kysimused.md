@@ -1,6 +1,6 @@
 ## Küsimused
 
-[Select laused](select.md) | [Protseduurid](Protseduur.md) | [vaade](vaade.md) | [Kasutaja](kasutaja.md) | [Triggerid](trigerid.md) | [keys](keys.md) | [küsimused](kysimused.md)
+[Select laused](select.md) | [Protseduurid](Protseduur.md) | [vaade](vaade.md) | [Kasutaja](kasutaja.md) | [keys](keys.md) | [küsimused](kysimused.md) | [Triggerid](trigerid2.md)
 
 <img width="942" height="304" alt="{7C6F76FE-FAD5-43F6-874E-ED1CDA9ACBD5}" src="https://github.com/user-attachments/assets/e54da848-3c49-4217-be1a-f66c17226ece" />
 <img width="1303" height="545" alt="{61213C69-1E0B-4803-BD2A-F03ABB874768}" src="https://github.com/user-attachments/assets/ae855201-966d-44c3-810d-3b6720ecd09e" />
