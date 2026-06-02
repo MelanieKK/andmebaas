@@ -1,6 +1,6 @@
 # Andmebaasi võtmed (Keys)
 
-[Select laused](select.md) | [Protseduurid](Protseduur.md) | [vaade](vaade.md) | [Kasutaja](kasutaja.md) | [Triggerid](trigerid.md) | [keys](keys.md) | [küsimused](kysimused.md)
+[Select laused](select.md) | [Protseduurid](Protseduur.md) | [vaade](vaade.md) | [Kasutaja](kasutaja.md) | [keys](keys.md) | [küsimused](kysimused.md) | [Triggerid](trigerid2.md)
 
 Andmebaasi võtmed on vahendid, millega tuvastatakse ridu tabelites, luuakse seoseid tabelite vahel ja tagatakse andmete unikaalsus ning terviklus.
 
