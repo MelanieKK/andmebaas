@@ -142,4 +142,6 @@ select * from linnad
 select * from logi
 
 ```
+<img width="555" height="319" alt="{EC327A5B-AEFA-4271-AC95-967C3D09B756}" src="https://github.com/user-attachments/assets/5a9015d5-36c8-4a1f-a060-853083d842ef" />
+
 <img width="703" height="653" alt="{592BE182-3E9F-4184-942F-3BDDF728B9A4}" src="https://github.com/user-attachments/assets/0c78b8c7-dd3a-4fe7-b969-75ff05431edb" />
