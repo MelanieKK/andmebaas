@@ -50,7 +50,7 @@ Values('Viljandi', 'Viljandimaa', 50000);
 select * from linnad
 select * from logi
 ```
-<img width="466" height="351" alt="{479946D2-22E1-4C02-BFD6-A2C71189E47D}" src="https://github.com/user-attachments/assets/0c292472-48d9-4b28-bbe9-1260088ed9da" />
+<img width="463" height="292" alt="{FA66ABB4-79BE-47AB-B281-B61A4B6793EE}" src="https://github.com/user-attachments/assets/661f6c98-4492-473f-a102-5559b9d4c450" />
 
 ```sql
 --2. Delete triger - jälgib kustutamibe tabelis linnad 
