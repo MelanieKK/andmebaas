@@ -95,7 +95,7 @@ on deleted.linnId=inserted.linnId;
 Update linnad set linnanimi='Tallinn22', rahvarv=700000
 where linnId=1
 ```
-<img width="563" height="354" alt="{6CC68111-EBFD-430E-8429-BFF9FC73C545}" src="https://github.com/user-attachments/assets/7a2782bf-d184-4195-9023-1e9a83f8f1b5" />
+<img width="553" height="296" alt="{C21EA4DD-62EB-4CAA-ADB7-B1C025B3521C}" src="https://github.com/user-attachments/assets/6755d681-1fb9-486c-b27b-445efd0ffe97" />
 
 ```sql
 --triger sisse/välja lülitamine
