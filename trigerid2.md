@@ -104,7 +104,7 @@ Disable Trigger linnaKustutamine on linnad
 Enable trigger linnaUuendamine ON linnad
 Enable trigger linnaKustutamine on linnad
 ```
-<img width="244" height="67" alt="{1CBABE5C-4E3A-4480-8617-C4F243566C5F}" src="https://github.com/user-attachments/assets/50091d3f-8a8a-4562-a9dd-a534c12935f0" />
+<img width="228" height="62" alt="{55E642FA-F35C-46E4-927E-2A6EE01BB711}" src="https://github.com/user-attachments/assets/ca0c0b98-3d47-41b9-b799-5b46e9ba8c7d" />
 
 ```sql
 --Ühine triger mis jälgib kas lisamine või kustutamine tabelisse linnad
