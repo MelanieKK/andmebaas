@@ -70,7 +70,7 @@ from deleted;
 --kontroll
 Delete from linnad where linnId=2
 ```
-<img width="487" height="343" alt="{303A3B12-C9CC-461C-BAD3-0A2C7864CA24}" src="https://github.com/user-attachments/assets/04378143-213b-4f2f-9dc7-a6266e03205e" />
+<img width="477" height="286" alt="{CD9DE4F1-CDB2-4C94-B551-F10901322B07}" src="https://github.com/user-attachments/assets/0221a66e-209a-4270-96f1-b24c75585b2f" />
 
 ```sql
 --3.Update Trigger - jälgib uuendused/muutused tabelis linnad
