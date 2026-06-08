@@ -43,7 +43,7 @@ SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'
 -- ÜLESANNE 1: Testandmed tabelitesse
 USE kyberspot_db;
 
--- Lisa 3 mängu Mang tabelisse
+-- Lisan 3 mängu Mang tabelisse
 INSERT INTO Mang (MangNimi) VALUES ('Minecraft');
 INSERT INTO Mang (MangNimi) VALUES ('Fortnite');
 INSERT INTO Mang (MangNimi) VALUES ('Valorant');
@@ -209,16 +209,17 @@ USE kyberspot_db;
 GO
 
 -- Protseduur 1: lisab uue mängu Mang tabelisse
-CREATE PROCEDURE lisa_mang
+ALTER PROCEDURE lisa_mang
     @p_nimi VARCHAR(100) -- parameeter: mängu nimi
 AS
 BEGIN
     INSERT INTO Mang (MangNimi) VALUES (@p_nimi);
+	SELECT * FROM Mang
 END;
-GO
+
 
 -- Protseduur 2: lisab uue meeskonna KyberSport tabelisse
-CREATE PROCEDURE lisa_kyber
+ALTER PROCEDURE lisa_kyber
     @p_ryhm VARCHAR(100), -- parameeter: meeskonna nimi
     @p_arv INT, -- parameeter: liikmete arv
     @p_mangID INT -- parameeter: mängu ID
@@ -226,11 +227,11 @@ AS
 BEGIN
     INSERT INTO KyberSport (KyberRyhmaNimi, OsalejateArv, MangID)
     VALUES (@p_ryhm, @p_arv, @p_mangID);
+	SELECT * FROM KyberSport
 END;
-GO
 
 -- Protseduur 3: otsib osalejaad vanuse järgi
-CREATE PROCEDURE otsi_vanus
+ALTER PROCEDURE otsi_vanus
     @p_vanus INT -- parameeter: maksimaalne vanus
 AS
 BEGIN
@@ -239,8 +240,8 @@ BEGIN
     FROM KyberOsaleja o
     JOIN KyberSport k ON o.KyberSportID = k.KyberSportID
     WHERE o.Vanus <= @p_vanus;
+	
 END;
-GO
 
 -- Testi kõik 3 protseduuri 
 USE kyberspot_db;
@@ -398,3 +399,50 @@ GO
 EXEC lisa_mang 'League of Legends';
 EXEC lisa_kyber 'TiimE', 7, 1;
 EXEC otsi_vanus 18;
+
+USE kyberspot_db;
+
+-- Muuda veeru tüüp DATE - DATETIME
+ALTER TABLE logi ALTER COLUMN kuupaev DATETIME;
+
+-- Muuda triggerid et salvestaks täpset aega
+DROP TRIGGER kyber_lisa_logi;
+DROP TRIGGER kyber_kustuta_logi;
+GO
+
+CREATE TRIGGER kyber_lisa_logi
+ON KyberSport
+AFTER INSERT
+AS
+BEGIN
+    INSERT INTO logi (kasutaja, kuupaev, sisestatudAndmed)
+    SELECT 
+        SYSTEM_USER,
+        GETDATE(),  -- nüüd salvestab kuupäeva + kellaaja
+        CONCAT('LISATUD KyberSport: ID=', CAST(i.KyberSportID AS VARCHAR),
+               ', Ryhm=', i.KyberRyhmaNimi,
+               ', MangID=', CAST(i.MangID AS VARCHAR))
+    FROM inserted i;
+END;
+GO
+
+CREATE TRIGGER kyber_kustuta_logi
+ON KyberSport
+AFTER DELETE
+AS
+BEGIN
+    INSERT INTO logi (kasutaja, kuupaev, sisestatudAndmed)
+    SELECT 
+        SYSTEM_USER,
+        GETDATE(),  -- nüüd salvestab kuupäeva + kellaaja
+        CONCAT('KUSTUTATUD KyberSport: ID=', CAST(d.KyberSportID AS VARCHAR),
+               ', Ryhm=', d.KyberRyhmaNimi,
+               ', MangID=', CAST(d.MangID AS VARCHAR))
+    FROM deleted d;
+END;
+GO
+
+INSERT INTO KyberSport (KyberRyhmaNimi, OsalejateArv, MangID) VALUES ('AjaTiim', 3, 1);
+DELETE FROM KyberSport WHERE KyberRyhmaNimi = 'AjaTiim';
+
+SELECT * FROM logi;
